@@ -18,3 +18,6 @@ print(f'[2] + Valor predictivo negativo con 20% prevalencia: {valor_predictivo_n
 print(f'[2.1] + Valor predictivo negativo con 80% prevalencia: {valor_predictivo_negativo(95, 75, 80)}\n')
 
 
+
+#kaixo alex mattie
+
