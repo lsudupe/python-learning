@@ -7,5 +7,5 @@ def countNucl(dna_seq):
         dic_nucl[nucl] += 1
     return dic_nucl
 
-print(countNucl(s))asasasa
+print(countNucl(s))
 
