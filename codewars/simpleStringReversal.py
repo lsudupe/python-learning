@@ -1,5 +1,5 @@
 #solve("our code") = "edo cruo"
-string = 'Alex mat tie'
+string = 'your code rocks'
 
 def solve(word):
   #el primer paso de la función es darle la vuelta al string.Check
@@ -18,13 +18,15 @@ def solve(word):
   for idx, space in enumerate(char_list):
     if space == ' ':
       index.append(idx)
-
+  #return index
   #el tercero, hacer que coincidan los espacios
-    final_string = ''
-    for position in index:
-      reverse_nospace.insert(position, ' ')
-    final_string = ''.join(reverse_nospace)
-    return final_string
+  final_string = ''
+  for position in index:
+    reverse_nospace.insert(position, ' ')
+  final_string = ''.join(reverse_nospace)
 
+  return final_string
+    
+  
 print(solve(string))
 
