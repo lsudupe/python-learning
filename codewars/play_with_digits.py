@@ -15,18 +15,16 @@ dig_pow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 236068
 def dig_pow(n, p):
     number = [int(num) for num in str(n)] #tengo n en lista por digito
     exp = list(range(p, len(number) + 1, 1))
+   
     print(number)
     print(exp)
 
 
-'''
-    sum = []                        #crear exponentes, MAL
-    for a in number:
-        for b in exp:
-            operation = a**b
-            sum.append(operation)
+    exponent_list = [a**b for a,b in zip(number, exp)]
+  
+    print(exponent_list)
             
-            
+    '''        
     sumo = [str(i2) for i2 in sum]
     sumo_stg = ''.join(sumo)
     sumo_integer = int(sumo_stg) #convertir list en int
@@ -41,4 +39,4 @@ def dig_pow(n, p):
         '''
 
 
-dig_pow(46255, 1)
+dig_pow(695, 1)
