@@ -14,14 +14,20 @@ dig_pow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 236068
 
 def dig_pow(n, p):
     number = [int(num) for num in str(n)] #tengo n en lista por digito
-    exp = [p]
-    while len(number) == len(exp):
-        for i in range(100, 1):
-            exp.append(p+i)
+    exp = [range(p, len(number), 1)]
+    zip_list = zip(number, exp)
+
+    sum = []                        #crear exponentes
     for a in number:
         for b in exp:
-            sum = pow(a, b)  
-    count = sum/p, 0
+            sum.append({a}**{b}.format(a, b))
+            
+            
+    sumo = [str(i2) for i2 in sum]
+    sumo_stg = ''.join(sumo)
+    sumo_integer = int(sumo_stg) #convertir list en int
+
+    count = sumo_integer / p
     sume = [int(i2) for i2 in str(count)]  #lista a comparar con number
 
     if number == sume:
