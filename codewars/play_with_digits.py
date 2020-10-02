@@ -16,36 +16,42 @@ def dig_pow(n, p):
     number = [int(num) for num in str(n)] 
     exp = list(range(p, len(number) + 1, 1))
    
-    print(number)
-    print(exp)
+    #print(number)
+    #print(exp)
 
 
     exponent_list = [a**b for a,b in zip(number, exp)]  
   
-    print(exponent_list)
-            
-            
-    sumo = [str(i2) for i2 in exponent_list]
+    #print(exponent_list)
+
+
+    sumo = 0       
+    for i in exponent_list:
+        sumo += i
+    
+    #print(sumo)
+    '''sumo = [str(i2) for i2 in exponent_list]
     sumo_stg = ''.join(sumo)
     sumo_integer = int(sumo_stg) #convertir list en int
-
-
     print(sumo)
     print(sumo_stg)
-    print(sumo_integer)
+    print(sumo_integer)'''
 
 
-    count = int(sumo_integer/p)
+    count = int(sumo/p)
     print(count)
 
-    '''sume = [int(i2) for i2 in str(count)]  #lista a comparar con number
-    print(sume)'''
+    sume = [int(i2) for i2 in str(count)]  #lista a comparar con number
+    #print(sume)
 
-    if number == count:
+    solution = count/n
+    print(solution)
+
+    '''if count / number == sume
         print(1)
     else:
-        print(-1)
+        print(-1)'''
        
 
 
-dig_pow(89, 1)
+dig_pow(695, 2)
