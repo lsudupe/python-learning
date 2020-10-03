@@ -9,34 +9,20 @@ dig_pow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2
 dig_pow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51'''
 
 
-
-
-
 def dig_pow(n, p):
     number = [int(num) for num in str(n)] 
-    print(number)
     exp = list(range(p, len(number) + p))   
-    print(exp)
     exponent_list = [a**b for a,b in zip(number, exp)]  
-    print(exponent_list)
     sumo = 0       
     for i in exponent_list:
         sumo += i
-    print(sumo)
     count = (sumo/n)
-    print(count)
-    if count > 0 and count == int(count) :
+    if count == int(count):
         return count
     else:
         return -1
 
-       
 print(dig_pow(92, 1))
 
-'''
 
-def dig_pow(n, p):
-  sum = 0
-  for (power, digit_str) in enumerate(str(n), p):
-     sum += int(digit_str) ** power
-  return sum / n if sum % n == 0 else -1 '''
+
