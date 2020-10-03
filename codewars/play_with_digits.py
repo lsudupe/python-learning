@@ -32,3 +32,11 @@ def dig_pow(n, p):
 
        
 print(dig_pow(92, 1))
+
+'''
+
+def dig_pow(n, p):
+  sum = 0
+  for (power, digit_str) in enumerate(str(n), p):
+     sum += int(digit_str) ** power
+  return sum / n if sum % n == 0 else -1 '''
